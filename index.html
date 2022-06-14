@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>BeyondLon | Personal Page</title>
+		 <meta name="theme-color" content="#f9431b"/>
+		 <link rel="shortcut icon" href="assets/css/images/solvent.png" type="image/x-icon">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<script>
+			document.addEventListener("contextmenu", e => {
+				alert("Sorry! Right Click Is Disabled");
+				e.preventDefault();
+			});
+		</script>
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Albin Shiby</h1>
+						<p>Still Learning &nbsp;&bull;&nbsp; FOSS Supporter &nbsp;&bull;&nbsp; Cyber Enthusiast</p>
+						<nav>
+							<ul>
+								<li><a href="https://twitter.com/beyondlon" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://instagram.com/beyondlon" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://skyline.github.com/beyondlon/2021" target="_blank" class="fa solid fa-cubes"><span class="label">Gitlab</span></a></li>
+								<li><a href="https://github.com/beyondlon" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto://personal@albins.slmail.me" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">Designed & build By <a href="https://github.com/beyondlon" target="_blank" >BeyondLon</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
