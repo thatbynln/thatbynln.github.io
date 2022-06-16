@@ -1,4 +1,4 @@
-- name: Surf Videos
+- name: Surf Video
   url: https://github.com/bchiang7/Surf-Videos
   code: https://github.com/bchiang7/Surf-Videos
   description: Small React project created during an interview process to browse and search surf videos via the YouTube API.
