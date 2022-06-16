@@ -10,7 +10,7 @@ on the www.
 
 
 TBL<br>
-Personal@albins.slmail.me | @thatbynln<br>
+Public@thatbynln.slmail.me | @thatbynln<br>
  _                                _ _
 | |__   ___ _   _  ___  _ __   __| | | ___  _ __
 | '_ \ / _ | | | |/ _ \| '_ \ / _` | |/ _ \| '_ \
