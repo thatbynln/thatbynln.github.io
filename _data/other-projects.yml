@@ -20,8 +20,8 @@
     - thing: Simple
 
 - name: File-Grabber
-  url: https://thatbynln.github.io/file-grabber
-  code: https://thatbynln.github.io/file-grabber
+  url: https://thatbynln.github.io/file-graber
+  code: https://thatbynln.github.io/file-graber
   description: Free File Downloader Made with Pure Vanilla Javascript
   used:
     - thing: Javascript
