@@ -8,17 +8,17 @@
   transform: translate(-50%, -50%);
   top: 25%;
 }
-.typingEffect h3 {
+.typingEffect h2 {
   position: relative;
-  color: #152860;
+ 
   line-height:normal;
   text-align: center;
   white-space: nowrap;
-  font-size: 40px;
+
   letter-spacing: 0.0625em;
   width: calc(20ch + 20*0.0625em);
 }
-.typingEffect h3:after {
+.typingEffect h2:after {
   display: block;
   position: absolute;
   content: '';
@@ -26,7 +26,7 @@
   height: 2ex;
   left: 0;
   top: 0;
-  background: #eff5ed;
+ 
   animation: 0.6s blink 20, move 3s 1.5s forwards steps(1);
   border-left: 1px solid #152860;
   box-shadow: 0px 1ex 0px 0px #eff5ed;
