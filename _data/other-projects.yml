@@ -8,27 +8,25 @@
     - thing: CSS
     - thing: Github Pages
 
-- name: Halcyon Theme
-  url: https://bchiang7.github.io/halcyon-site/
-  code: https://github.com/bchiang7/halcyon-site
+- name: QR Code Generator
+  url: https://thatbynln.github.io/QR-Code-Generator
+  code: https://thatbynln.github.io/QR-Code-Generator
   description: Free QR Code Generator with vanilla javascript and you can expirence it <a class="underline-link" href="https://thatbynln.github.io/QR-Code-Generator">Live From Here</a>
   used:
-    - thing: Gatsby
-    - thing: Sublime Text
-    - thing: Atom
-    - thing: VS Code
-    - thing: iTerm2
-    - thing: Hyper
-
-- name: Lonely Planet DBMS
-  url: https://github.com/bchiang7/CS3200-Project
-  code: https://github.com/bchiang7/CS3200-Project
-  description: Final project for my Database Design course at Northeastern. A simple web application that allows users to filter through a database containing Lonely Planet's <a class="underline-link" href="https://www.amazon.com/Lonely-Planets-Ultimate-Travel-Places/dp/1760342777" target="_blank">Top 500 Travel Destinations</a>. Users are able to add themselves as visitors as well as leave reviews of the destinations.
-  used:
-    - thing: Python
-    - thing: MySQL
-    - thing: Flask
     - thing: HTML
     - thing: CSS
-    - thing: JavaScript
+    - thing: Javascript
+    - thing: Vanilla
+    - thing: Simple
+
+- name: File-Grabber
+  url: https://thatbynln.github.io/file-grabber
+  code: https://thatbynln.github.io/file-grabber
+  description: Free File Downloader Made with Pure Vanilla Javascript
+  used:
+    - thing: Javascript
+    - thing: Github Pages
+    - thing: Vanilla
+    - thing: HTML
+    - thing: CSS
     
