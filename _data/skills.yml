@@ -1,0 +1,21 @@
+languages:
+  - item: JavaScript (ES6)
+  - item: C Language
+  - item: HTML
+  - item: CSS
+  - item: Python
+  
+frameworks:
+  - item: Github Pages
+  - item: React
+  - item: Jekyll
+  - item: Node
+  - item: Gitlab Pages
+  
+tools:
+  - item: Bash
+  - item: Git & Github
+  - item: Gitlab
+  - item: Firefox DevTools
+  - item: Linux
+
