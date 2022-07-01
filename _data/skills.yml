@@ -16,6 +16,14 @@ tools:
   - item: Bash
   - item: Git & Github
   - item: Gitlab
+  - item: Tor Browser
   - item: Firefox DevTools
   - item: Linux
+  
+Design:
+  - item: Inkscape
+  - item: GIMP
+  - item: Photopea
+  - item: Icon Browser
+  - item: Color Prof
 
