@@ -24,11 +24,10 @@
   code: https://github.com/thatbynln/thatbynln
   description: Config Intro file for github profile.
   used:
-    - thing: Python
-    - thing: MySQL
-    - thing: Flask
     - thing: HTML
     - thing: CSS
-    - thing: JavaScript
+    - thing: Javascript
+    - thing: SVG IMGS
+ 
 
 
