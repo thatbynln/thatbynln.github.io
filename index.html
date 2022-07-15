@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html class="js" lang="en">
+
+<head itemscope="" itemtype="http://schema.org/WebSite">
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>That Bynln | Personal Page</title>
+  <meta name="description" content="That Bynln | Personal Page">
+  <link type="text/plain" rel="author" href="#">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="msapplication-tap-highlight" content="no">
+  <style>
+    body {
+      background-color: #252a60 !important;
+    }
+
+    body.loaded {
+      background-color: #f3f3f3 !important;
+    }
+
+    #page-wrap {
+      opacity: 0;
+    }
+
+    .loaded #page-wrap {
+      opacity: 1;
+    }
+
+    @-webkit-keyframes "stripe" {
+      0% {
+        left: 0;
+        width: 0px;
+      }
+
+      25% {
+        left: 0;
+        width: 100%;
+      }
+
+      50% {
+        left: 100%;
+        width: 0px;
+      }
+
+      75% {
+        left: 0;
+        width: 100%;
+      }
+
+      100% {
+        left: 0;
+        width: 0px;
+      }
+    }
+
+    @keyframes "stripe" {
+      0% {
+        left: 0;
+        width: 0px;
+      }
+
+      25% {
+        left: 0;
+        width: 100%;
+      }
+
+      50% {
+        left: 100%;
+        width: 0px;
+      }
+
+      75% {
+        left: 0;
+        width: 100%;
+      }
+
+      100% {
+        left: 0;
+        width: 0px;
+      }
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #252a60;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.7s, visibility 0.7s, z-index 0.7s;
+      z-index: 61
+    }
+
+    #loader.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1
+    }
+
+    .no-js #loader {
+      display: none
+    }
+
+    .loader-content {
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 90px;
+      overflow: hidden;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.25s ease;
+      z-index: 70
+    }
+
+    .loader-content.is-hidden {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .loader-content>* {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0
+    }
+
+    .stripe-loader {
+      width: 100%;
+      height: 90px
+    }
+
+    .stripe {
+      height: 30px;
+      width: 0;
+      background: #ffffff;
+      position: relative;
+      margin: 0
+    }
+
+    .stripe:first-child {
+      -webkit-animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) infinite;
+      animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) infinite
+    }
+
+    .stripe:nth-child(2) {
+      -webkit-animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s infinite;
+      animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.1s infinite
+    }
+
+    .stripe:nth-child(3) {
+      -webkit-animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s infinite;
+      animation: stripe 1.5s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s infinite
+    }
+
+    #loader-after {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #1c1d25;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.7s, visibility 0.7s, z-index 0.7s;
+      z-index: 62
+    }
+
+    #loader-after.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1
+    }
+  </style>
+  <link rel="stylesheet" href="assets/application.css">
+  <link rel="canonical" href="https://thatbynln.github.io" itemprop="url">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ThatBynln | Personal Page For Public">
+  <meta name="google-site-verification" content="Vv6Ab5p4eW3hXGhlz5FEzlS7BAR-3yL3s6Hwt0XRTTs">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://thatbynln.github.io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="img/technologist.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/technologist.png" sizes="16x16">
+  <link rel="manifest" href="https://thatbynln.github.io/manifest.json">
+  <link rel="mask-icon" href="https://thatbynln.github.io/safari-pinned-tab.svg" color="#191a21">
+  <meta name="theme-color" content="#191a21">
+  <meta property="og:url" content="/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ThatBynln | Personal Page For Public">
+  <meta property="og:image" content="http://thatbynln/img/social-image.jpg">
+  <meta property="og:description" content="ThatBynln | Personal Page For Public">
+  <meta property="og:site_name" content="Site Name">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@thatbynln">
+  <meta name="twitter:creator" content="@thatbynln">
+  <meta name="twitter:url" content="https://thatbynln.github.io">
+  <meta name="twitter:title" content="ThatBynln | Personal Page For Public">
+  <meta name="twitter:description" content="ThatBynln | Personal Page For Public">
+  <meta name="twitter:image" content="https://thatbynln.github.io/img/social-image.jpg">
+ 
+  <meta itemprop="name" content="ThatBynln | Personal Page For Public">
+  <meta itemprop="description" content="ThatBynln | Personal Page For Public">
+  <meta itemprop="image" content="http://riccardozanutta.com/img/social-image.jpg">
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="loaded">
+  <div id="loader" class="is-hidden">
+    <div class="loader-content is-hidden">
+      <div class="stripe-loader">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+      </div>
+    </div>
+  </div>
+  <div id="loader-after" style="transform: translate(100%) matrix(1, 0, 0, 1, 0, 0);" class="is-hidden"></div>
+  <div id="page-transition" class="home" style="transform: translate(-100%) matrix(1, 0, 0, 1, 0, 0);">
+    <div class="page-transition-content is-hidden">
+      <div class="stripe-loader">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+      </div>
+    </div>
+  </div>
+  <div id="page-transition-after" style="transform: translate(-100%) matrix(1, 0, 0, 1, 0, 0);"></div>
+  <div id="page-wrap">
+    <nav itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="main-navigation is-loaded">
+      <div class="content nav-content">
+        <a href="https://thatbynln.github.io/" data-destination="home" itemprop="url" class="nav-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" id="my-svg" width="256" height="256" viewBox="0 0 256 256">
+            <path fill="#FFF" d="M53.2 145.1l81.9-71.7h-34.3L19 145.1l102.8 90h34.3l-102.9-90"></path>
+            <g fill="#FFF">
+              <path
+                d="M145.3 145.1l36-31.6s.8-.7 1.1-1l2.4-2.4c8.5-10.3 13.3-23.3 13.3-36.7 0-31.8-25.8-57.7-57.6-57.7l-111.1.1L7.2 38.6l111.4-.1h21.9c19.2 0 34.8 15.6 34.8 34.8 0 8.2-2.7 15.8-8 22.2-1 1.3-8.3 7.3-8.3 7.3l-12.4 10.6-35.6 31.7 102.9 90h34.3l-102.9-90zm33.4-31.7h.2-.2z">
+              </path>
+              <path
+                d="M252.8 236.9h-39.6l-.5-.4-104.4-91.3 37.1-33 12.5-10.6c3.5-2.9 7.5-6.3 8.1-7 5-6 7.6-13.3 7.6-21.1 0-18.2-14.8-33.1-33.1-33.1H3L28.6 14h115.8l-.1.1c31 2 55.6 27.8 55.6 59.3 0 13.6-4.9 27.1-13.7 37.8-.5.6-2.2 2.3-2.6 2.6-.3.3-1.2 1-1.2 1l-.5.4-34 29.8 104.9 91.9zm-38.3-3.5h29l-100.9-88.3 34.1-29.9h-2.2l3.6-3.5h1v1.5l1.6-1.4c.2-.2.4-.4.6-.5.4-.3 1.9-1.9 2.2-2.2 8.3-10.1 12.9-22.8 12.9-35.6 0-30.8-25.1-55.9-55.9-55.9h-3.9l-106.5-.1-18.8 19.4 109-.1h20.1c20.2 0 36.6 16.4 36.6 36.6 0 8.6-2.9 16.6-8.4 23.3-1 1.3-7.3 6.5-8.5 7.5l-12.4 10.6-34.1 30.3 100.9 88.3z">
+              </path>
+              <g>
+                <path
+                  d="M249.3 235.5h-35.5l-.1-.1-103.2-90.3.3-.3 35.6-31.7 12.4-10.6c2.5-2.1 7.5-6.2 8.3-7.2 5.1-6.2 7.9-13.8 7.9-21.9 0-19-15.4-34.4-34.4-34.4H6.2l23-23.7h.2l112.1-.1c31.6.5 57.1 26.4 57.1 58.1 0 13.3-4.8 26.5-13.4 37-.4.5-2.1 2.2-2.4 2.5-.3.3-1.1 1-1.1 1l-.1.1-35.5 31.2 103.2 90.4zm-35.3-.8h33l-102.4-89.6 36.4-32c.2-.2.7-.6 1-.9.3-.3 2-1.9 2.4-2.4 8.5-10.3 13.2-23.3 13.2-36.4 0-31.5-25.7-57.2-57.2-57.3h-1l-110 .1L8 38.2l111-.1h21.5c19.4 0 35.2 15.8 35.2 35.2 0 8.3-2.8 16-8 22.4-1 1.3-8.1 7.1-8.4 7.3l-12.4 10.6-35.2 31.4L214 234.7zm-35-120.9h-1.4l1-.8h.4V113.8z">
+                </path>
+                <path
+                  d="M253.9 237.3H213l-.5-.4-104.8-91.7 1.8-1.6 35.6-31.7 12.5-10.6c4-3.3 7.5-6.4 8-7 4.9-5.9 7.5-13.1 7.5-20.8 0-18-14.7-32.7-32.7-32.7H2l26.4-27.2 117.2-.1-.2.2c30.6 2.6 54.8 28.5 54.8 59.6 0 13.7-4.9 27.3-13.8 38.1-.5.6-2.3 2.4-2.6 2.7-.3.3-1.2 1-1.2 1l-.5.4-33.6 29.5 105.4 92.3zm-39.2-4.3h27.7L142 145.1l33.6-29.5h-3.1l4.7-3.8.1-2.6 1.8 2 1.4.1c.2-.1.3-.3.4-.4.4-.3 1.9-1.9 2.2-2.2 8.3-10 12.8-22.6 12.8-35.3 0-30.6-24.9-55.5-55.5-55.5H30.3l-18 18.5 108.4-.1h19.7c20.4 0 37 16.6 37 37 0 8.7-2.9 16.8-8.4 23.5-.7.9-3.5 3.4-8.5 7.5L148 115.1l-33.7 30L214.7 233z">
+                </path>
+              </g>
+            </g>
+          </svg><span itemprop="name" class="visual-hide">Home</span><span aria-label="Riccardo Zanutta's Logo">That Bynln</span></a>
+        <div aria-label="Mobile Menu" class="nav-toggle"><span class="menu-trigger"><i
+              class="menu-trigger-bar top"></i><i class="menu-trigger-bar middle"></i><i
+              class="menu-trigger-bar bottom"></i></span></div>
+        <ul class="nav-links">
+          <li itemprop="name"><a href="#case-studies" data-scroll="" itemprop="url"
+              class="no-smoothState no-single-work">Case Studies</a></li>
+          <li itemprop="name"><a href="#experiments" data-scroll="" itemprop="url"
+              class="no-smoothState no-single-work">Experiments</a></li>
+          <li class="in-single-work"><a href="https://thatbynln.github.io/" data-destination="home" rel="nofollow"><span
+                aria-label="Back" class="nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="476.2"
+                  height="476.2" viewBox="174 -174.2 476.2 476.2">
+                  <path d="M244.6 134.5l21.2-21.2-34.4-34.4h418.8v-30H231.4l34.4-34.4-21.2-21.2L174 63.9"></path>
+                </svg></span>Turn Back Home</a></li>
+          <li class="in-single-work"><a href="" id="all-works" rel="nofollow" class="no-smoothState">All Works</a></li>
+          <li><a href="" class="no-smoothState open-contact">Contact</a></li>
+          <li class="no-single-work"><a href="#" id="change-theme" class="no-smoothState no-single-work"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.919 285.919">
+                <path
+                  d="M142.959 0C64.131 0 0 64.132 0 142.96s64.131 142.959 142.959 142.959 142.96-64.131 142.96-142.959S221.787 0 142.959 0zm0 260.919V25c65.043 0 117.96 52.917 117.96 117.96 0 65.043-52.917 117.959-117.96 117.959z">
+                </path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="mobile-menu"><span aria-label="Close" class="close-trigger"><i class="close-trigger-bar left"></i><i
+          class="close-trigger-bar right"></i></span>
+      <ul class="mobile-nav-links">
+        <li><a href="/" data-destination="home">Home</a></li>
+        <li class="in-single-work"><a href="" id="all-works" rel="nofollow" class="no-smoothState">All Works</a></li>
+        <li><a href="#case-studies" data-scroll="" class="no-smoothState no-single-work">Case Studies</a></li>
+        <li><a href="#experiments" data-scroll="" class="no-smoothState no-single-work">Experiments</a></li>
+        <li><a href="" class="no-smoothState open-contact">Contact</a></li>
+      </ul>
+      <ul class="nav-social-stripe">
+        <li><a href="https://twitter.com/thatbynln" target="_blank" rel="noopener" aria-label="Twitter"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
+              <path
+                d="M612 116.258c-22.525 9.98-46.694 16.75-72.088 19.772 25.93-15.527 45.777-40.155 55.184-69.41-24.322 14.378-51.17 24.82-79.775 30.48-22.906-24.438-55.49-39.66-91.63-39.66-69.333 0-125.55 56.218-125.55 125.514 0 9.828 1.11 19.427 3.25 28.606-104.325-5.24-196.834-55.223-258.75-131.174-10.822 18.51-16.98 40.078-16.98 63.1 0 43.56 22.182 81.994 55.836 104.48-20.575-.688-39.926-6.348-56.867-15.756v1.568c0 60.806 43.29 111.554 100.692 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.2 117.253 87.194-42.946 33.655-97.098 53.656-155.915 53.656-10.134 0-20.116-.612-29.944-1.72 55.568 35.68 121.537 56.484 192.44 56.484 230.947 0 357.187-191.29 357.187-357.188l-.42-16.253C573.87 163.525 595.21 141.42 612 116.257z"
+                fill="#010002"></path>
+            </svg></a></li>
+        <li><a href="https://github.com/thatbynln" target="_blank" rel="noopener" aria-label="Github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="438.549" height="438.549" viewBox="0 0 438.549 438.549">
+              <path
+                d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z">
+              </path>
+            </svg></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="Codepen"><svg
+              xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+              <path fill="#231F20"
+                d="M252.1 85.7c0-.2-.1-.3-.1-.5-.1-.3-.1-.6-.2-.9 0-.2-.1-.3-.2-.5-.1-.3-.2-.5-.3-.8-.1-.2-.2-.4-.2-.5-.1-.2-.2-.5-.4-.7-.1-.2-.2-.3-.3-.5-.1-.2-.3-.4-.5-.7-.1-.2-.2-.3-.4-.5s-.3-.4-.5-.6l-.4-.4c-.2-.2-.4-.3-.6-.5-.2-.1-.3-.3-.5-.4-.1 0-.1-.1-.2-.1L132.8 1.8c-3.6-2.4-8.3-2.4-11.9 0L6.3 78.2c-.1 0-.1.1-.2.1-.2.1-.3.2-.5.4s-.4.3-.6.5c-.2.1-.3.3-.4.4-.2.2-.4.4-.5.6-.1.2-.3.3-.4.5-.2.2-.3.4-.5.7-.1.2-.2.3-.3.5-.1.2-.3.5-.4.7-.1.2-.2.3-.2.5-.1.3-.2.5-.3.8 0 .1 0 .3-.1.5-.1.3-.1.6-.2.9 0 .2-.1.3-.1.5-.1.5-.1.9-.1 1.4v76.4c0 .5 0 .9.1 1.4 0 .2.1.3.1.5.1.3.1.6.2.9 0 .2.1.3.2.5.1.3.2.5.3.8.1.2.2.4.2.5.1.2.2.5.4.7.1.2.2.3.3.5.1.2.3.4.5.7.1.2.2.3.4.5s.3.4.5.6l.4.4c.2.2.4.4.6.5.2.1.3.3.5.4.1 0 .1.1.2.1L120.9 249c1.8 1.2 3.9 1.8 6 1.8s4.2-.6 6-1.8l114.5-76.4c.1 0 .1-.1.2-.1.2-.1.3-.2.5-.4s.4-.3.6-.5l.4-.4c.2-.2.4-.4.5-.6.1-.2.3-.3.4-.5.2-.2.3-.4.5-.7.1-.2.2-.3.3-.5.1-.2.3-.5.4-.7.1-.2.2-.3.2-.5.1-.3.2-.5.3-.8.1-.2.1-.3.2-.5.1-.3.1-.6.2-.9 0-.2.1-.3.1-.5.1-.5.1-.9.1-1.4V87.1c-.1-.4-.2-.9-.2-1.4zM137.6 30.9L222 87.1l-37.7 25.2-46.7-31.2V30.9zm-21.5 0v50.2l-46.7 31.2-37.7-25.2 84.4-56.2zm-93 76.4l26.9 18-26.9 18v-36zm93 112.4l-84.4-56.3 37.7-25.2 46.7 31.2v50.3zm10.8-68.9l-38.1-25.5 38.1-25.5 38.1 25.5-38.1 25.5zm10.7 68.9v-50.2l46.7-31.2 37.7 25.2-84.4 56.2zm93-76.4l-26.9-18 26.9-18v36z">
+              </path>
+            </svg></a></li>
+      </ul>
+    </nav>
+    <header id="top" class="main-hero">
+     
+      <div class="main-hero-text">
+        <div class="content">
+          <div class="text-loading-mask">
+            <div class="text-loading-overlay is-reveal"></div>
+            <h1 itemprop="author" class="main-hero-title">I'm ThatBynln</h1>
+          </div>
+          <div>
+            <div class="text-loading-mask">
+              <div class="text-loading-overlay is-reveal"></div>
+              <h3 itemprop="specialty" class="main-hero-subtitle h5">FOSS Supporter and Cyber Enthusiast!</h3>
+            </div>
+          </div>
+          <div>
+            <div style="width: 175px;" class="text-loading-mask">
+              <div class="text-loading-overlay is-reveal"></div><a href="#"
+                class="the-button call-to-button no-smoothstate open-contact"><span class="button-text">About Me</span>
+                <div class="button-mask"></div><span class="button-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 476.213 476.213">
+                    <path
+                      d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                    </path>
+                  </svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="shapes-mask" class="is-loaded">
+        <!-- triangle--><svg xmlns="http://www.w3.org/2000/svg" width="37.196" height="32.213"
+          viewBox="0 0 37.196 32.213">
+          <symbol id="triangle"><svg xmlns="http://www.w3.org/2000/svg" width="25.675" height="22.236"
+              viewBox="0 0 25.675 22.236">
+              <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10"
+                d="M12.837 3l5.12 8.868 5.12 8.868H2.597l5.12-8.868z"></path>
+            </svg></symbol>
+        </svg><!-- semi circle--><svg xmlns="http://www.w3.org/2000/svg" width="29.093" height="14.546"
+          viewBox="0 0 29.093 14.546">
+          <symbol id="semiCircle">
+            <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10"
+              d="M1.5 14.546C1.5 7.34 7.34 1.5 14.547 1.5c7.205 0 13.046 5.84 13.046 13.046"></path>
+          </symbol>
+        </svg><!-- spring--><svg xmlns="http://www.w3.org/2000/svg" width="17.046" height="36.016"
+          viewBox="0 0 17.046 36.016">
+          <symbol id="spring">
+            <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10"
+              d="M9.945 34.614S1.46 31.38 1.5 23.92s11.73-4.797 11.73-4.797S3.82 16.708 4.18 8.77s12.784-7.255 12.784-7.255">
+            </path>
+          </symbol>
+        </svg><!-- line--><svg xmlns="http://www.w3.org/2000/svg" width="25.675" height="22.236"
+          viewBox="0 0 25.675 22.236">
+          <symbol id="line">
+            <path fill="none" stroke="#CF4981" stroke-width="3" stroke-miterlimit="10" d="M4.92 2.514L21.964 19.56">
+            </path>
+          </symbol>
+        </svg><svg width="25px" height="25px" class="layer1 p1"
+          style="transform: matrix(-1, 0, 0, -1, 100.923, -6.92308);">
+          <use xlink:href="#triangle" class="yellow"></use>
+        </svg><svg width="28px" height="28px" class="layer1 p2"
+          style="transform: matrix(1, 0, 0, 1, 100.923, -6.92308);">
+          <use xlink:href="#semiCircle" class="yellow"></use>
+        </svg><svg width="25px" height="25px" class="layer2 p3"
+          style="transform: matrix(0.70711, 0.7071, -0.7071, 0.70711, -100.923, 6.92308);">
+          <use width="25px" height="25px" xlink:href="#triangle" class="aqua"></use>
+        </svg><svg class="layer1 p4" style="transform: matrix(1, 0, 0, 1, 100.923, -6.92308);">
+          <use xlink:href="#triangle" class="pink"></use>
+        </svg><svg width="28px" height="28px" class="layer1 p5"
+          style="transform: matrix(0.70711, 0.7071, -0.7071, 0.70711, 100.923, -6.92308);">
+          <use xlink:href="#semiCircle" class="aqua"></use>
+        </svg>
+        <svg width="36px" height="36px" class="layer2 p6"
+          style="transform: matrix(0.70711, 0.7071, -0.7071, 0.70711, -100.923, 6.92308);">
+          <use xlink:href="#spring" class="pink"></use>
+        </svg><svg width="36px" height="36px" class="layer2 p7"
+          style="transform: matrix(1, 0, 0, 1, -100.923, 6.92308);">
+          <use xlink:href="#spring" class="pink"></use>
+        </svg><svg width="22px" height="22px" class="layer2 p8"
+          style="transform: matrix(1, 0, 0, 1, -100.923, 6.92308);">
+          <use xlink:href="#line" class="aqua"></use>
+        </svg><svg width="22px" height="22px" class="layer1 p9"
+          style="transform: matrix(0.42262, 0.90631, -0.90631, 0.42262, 100.923, -6.92308);">
+          <use xlink:href="#line" class="aqua"></use>
+        </svg><svg width="22px" height="22px" class="layer2 p10"
+          style="transform: matrix(0.08716, 0.9962, -0.9962, 0.08716, -100.923, 6.92308);">
+          <use xlink:href="#line" class="yellow"></use>
+        </svg><svg width="28px" height="28px" class="layer1 p11"
+          style="transform: matrix(-1, 0, 0, -1, 100.923, -6.92308);">
+          <use xlink:href="#semiCircle" class="aqua"></use>
+        </svg>
+      </div>
+      <div itemscope="primaryImageOfPage" class="logo-mask"><svg id="logo-anim" xmlns="http://www.w3.org/2000/svg"
+          xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
+          <style>
+            .st0 {
+              clip-path: url(#XMLID_8_);
+              fill: none;
+              stroke: url(#XMLID_9_);
+              stroke-width: 70.344;
+              stroke-miterlimit: 10;
+            }
+
+            .st1 {
+              clip-path: url(#XMLID_11_);
+              fill: none;
+              stroke: url(#XMLID_12_);
+              stroke-width: 70.344;
+              stroke-miterlimit: 10;
+            }
+          </style>
+          <g id="XMLID_10_">
+            <defs>
+              <path id="XMLID_4_" d="M54.9 147.2l80-70h-33.5l-80 70L122 235.3h33.5L54.9 147.2z"></path>
+            </defs>
+            <clipPath id="XMLID_8_">
+              <use xlink:href="#XMLID_4_" overflow="visible"></use>
+            </clipPath>
+            <linearGradient id="XMLID_9_" gradientUnits="userSpaceOnUse" x1="-169.589" y1="333.156" x2="21.795"
+              y2="333.156" gradientTransform="matrix(1 0 0 -1 156 491)">
+              <stop offset="0" stop-color="#2D2E83"></stop>
+              <stop offset="1" stop-color="#1D71B8"></stop>
+            </linearGradient>
+            <path id="XMLID_3_" d="M154.6 249.8L37.8 147.2c8.3-8.3 91.4-81.4 91.4-81.4" class="st0">
+            </path>
+          </g>
+          <g id="XMLID_6_">
+            <g id="XMLID_7_">
+              <defs>
+                <path id="XMLID_2_"
+                  d="M251.1 237.4h-40l-.5-.4-102.5-89.7 1.8-1.6 34.8-31 12.2-10.4c3.9-3.2 7.4-6.2 7.8-6.8 4.8-5.8 7.3-12.8 7.3-20.4 0-17.6-14.3-31.9-31.9-31.9H4.8l25.8-26.6 114.6-.1-.2.2c29.9 2.5 53.6 27.9 53.6 58.3 0 13.4-4.8 26.7-13.5 37.2-.5.6-2.3 2.3-2.6 2.6-.3.3-1.1 1-1.1 1l-.5.4L148 147l103.1 90.4z">
+                </path>
+              </defs>
+              <clipPath id="XMLID_11_">
+                <use xlink:href="#XMLID_2_" overflow="visible"></use>
+              </clipPath>
+              <linearGradient id="XMLID_12_" gradientUnits="userSpaceOnUse" x1="-156.508" y1="354.122" x2="115.621"
+                y2="354.122" gradientTransform="matrix(1 0 0 -1 156 491)">
+                <stop offset="0" stop-color="#2D2E83"></stop>
+                <stop offset="1" stop-color="#1D71B8"></stop>
+              </linearGradient>
+              <path id="XMLID_1_"
+                d="M-.5 29.8l126.8-.1c29.9 2.5 57.4 17 57.4 47.4 0 13.4-4.3 24.4-17.4 37.2-.5.6-2.3 2.3-2.6 2.6-.3.3-1.1 1-1.1 1l-.5.4-32.9 28.8 118.9 105.6"
+                class="st1"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <ul itemscope="" itemtype="http://schema.org/Organization" class="social-vertical-stripe"><span itemprop="name"
+          class="visual-hide">That Bynln</span>
+        <link itemprop="url" href="/">
+      
+        <li><a href="https://twitter.com/thatbynln" target="_blank" rel="noopener" itemprop="sameAs"><svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
+              <path
+                d="M612 116.258c-22.525 9.98-46.694 16.75-72.088 19.772 25.93-15.527 45.777-40.155 55.184-69.41-24.322 14.378-51.17 24.82-79.775 30.48-22.906-24.438-55.49-39.66-91.63-39.66-69.333 0-125.55 56.218-125.55 125.514 0 9.828 1.11 19.427 3.25 28.606-104.325-5.24-196.834-55.223-258.75-131.174-10.822 18.51-16.98 40.078-16.98 63.1 0 43.56 22.182 81.994 55.836 104.48-20.575-.688-39.926-6.348-56.867-15.756v1.568c0 60.806 43.29 111.554 100.692 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107 0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.2 117.253 87.194-42.946 33.655-97.098 53.656-155.915 53.656-10.134 0-20.116-.612-29.944-1.72 55.568 35.68 121.537 56.484 192.44 56.484 230.947 0 357.187-191.29 357.187-357.188l-.42-16.253C573.87 163.525 595.21 141.42 612 116.257z"
+                fill="#010002"></path>
+            </svg></a></li>
+        
+        <li><a href="https://github.com/thatbynln" target="_blank" rel="noopener" itemprop="sameAs"><svg
+              xmlns="http://www.w3.org/2000/svg" width="438.549" height="438.549" viewBox="0 0 438.549 438.549">
+              <path
+                d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z">
+              </path>
+            </svg></a></li>
+        <li><a href="#" target="_blank" rel="noopener" itemprop="sameAs"><svg
+              xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+              <path fill="#231F20"
+                d="M252.1 85.7c0-.2-.1-.3-.1-.5-.1-.3-.1-.6-.2-.9 0-.2-.1-.3-.2-.5-.1-.3-.2-.5-.3-.8-.1-.2-.2-.4-.2-.5-.1-.2-.2-.5-.4-.7-.1-.2-.2-.3-.3-.5-.1-.2-.3-.4-.5-.7-.1-.2-.2-.3-.4-.5s-.3-.4-.5-.6l-.4-.4c-.2-.2-.4-.3-.6-.5-.2-.1-.3-.3-.5-.4-.1 0-.1-.1-.2-.1L132.8 1.8c-3.6-2.4-8.3-2.4-11.9 0L6.3 78.2c-.1 0-.1.1-.2.1-.2.1-.3.2-.5.4s-.4.3-.6.5c-.2.1-.3.3-.4.4-.2.2-.4.4-.5.6-.1.2-.3.3-.4.5-.2.2-.3.4-.5.7-.1.2-.2.3-.3.5-.1.2-.3.5-.4.7-.1.2-.2.3-.2.5-.1.3-.2.5-.3.8 0 .1 0 .3-.1.5-.1.3-.1.6-.2.9 0 .2-.1.3-.1.5-.1.5-.1.9-.1 1.4v76.4c0 .5 0 .9.1 1.4 0 .2.1.3.1.5.1.3.1.6.2.9 0 .2.1.3.2.5.1.3.2.5.3.8.1.2.2.4.2.5.1.2.2.5.4.7.1.2.2.3.3.5.1.2.3.4.5.7.1.2.2.3.4.5s.3.4.5.6l.4.4c.2.2.4.4.6.5.2.1.3.3.5.4.1 0 .1.1.2.1L120.9 249c1.8 1.2 3.9 1.8 6 1.8s4.2-.6 6-1.8l114.5-76.4c.1 0 .1-.1.2-.1.2-.1.3-.2.5-.4s.4-.3.6-.5l.4-.4c.2-.2.4-.4.5-.6.1-.2.3-.3.4-.5.2-.2.3-.4.5-.7.1-.2.2-.3.3-.5.1-.2.3-.5.4-.7.1-.2.2-.3.2-.5.1-.3.2-.5.3-.8.1-.2.1-.3.2-.5.1-.3.1-.6.2-.9 0-.2.1-.3.1-.5.1-.5.1-.9.1-1.4V87.1c-.1-.4-.2-.9-.2-1.4zM137.6 30.9L222 87.1l-37.7 25.2-46.7-31.2V30.9zm-21.5 0v50.2l-46.7 31.2-37.7-25.2 84.4-56.2zm-93 76.4l26.9 18-26.9 18v-36zm93 112.4l-84.4-56.3 37.7-25.2 46.7 31.2v50.3zm10.8-68.9l-38.1-25.5 38.1-25.5 38.1 25.5-38.1 25.5zm10.7 68.9v-50.2l46.7-31.2 37.7 25.2-84.4 56.2zm93-76.4l-26.9-18 26.9-18v36z">
+              </path>
+            </svg></a></li>
+        <li><a href="#" target="_blank" rel="noopener" itemprop="sameAs"
+            class="dribbble"><svg xmlns="http://www.w3.org/2000/svg" width="96.954" height="96.954"
+              viewBox="0 0 96.954 96.954">
+              <path
+                d="M48.477.065C21.747.065 0 21.782 0 48.477 0 75.172 21.747 96.89 48.477 96.89S96.953 75.17 96.954 48.476c0-26.695-21.747-48.41-48.477-48.412zm31.895 22.852c5.528 6.85 8.892 15.508 9.048 24.934-1.84-.37-9.634-1.83-18.947-1.83-3.004 0-6.166.154-9.336.543-.267-.648-.537-1.3-.816-1.954-.823-1.935-1.706-3.853-2.626-5.74 14.33-5.905 21.247-14.1 22.678-15.953zM48.477 7.64c10.328 0 19.77 3.84 26.982 10.162-1.144 1.56-7.334 9.294-21.153 14.52-6.395-11.697-13.4-21.376-15.066-23.625 2.97-.69 6.06-1.056 9.237-1.056zm-17.592 3.975c1.412 1.942 8.422 11.725 14.982 23.33-17.606 4.625-33.242 4.93-37.014 4.93h-.4c2.71-12.496 11.153-22.88 22.432-28.26zM7.522 48.54c0-.336.008-.673.018-1.01.245.004.604.008 1.074.008 5.08 0 22.722-.423 40.9-5.82 1.104 2.16 2.156 4.35 3.13 6.54-.455.13-.91.265-1.36.41-20.467 6.612-31.72 24.112-33.45 26.97C11.42 68.416 7.52 58.927 7.52 48.54zm40.955 40.9c-9.397 0-18.06-3.182-24.98-8.515 1.17-2.294 9.66-17.584 32.093-25.392.016-.005.032-.01.047-.017 5.62 14.646 8.004 26.937 8.66 30.744-4.87 2.047-10.215 3.18-15.82 3.18zm23.194-7.21c-.548-3.15-2.754-14.67-7.85-28.72 2.86-.442 5.64-.617 8.246-.617 8.56 0 15.255 1.873 16.81 2.346-1.85 11.16-8.237 20.81-17.205 26.99z">
+              </path>
+            </svg></a></li>
+      </ul><a href="#case-studies" data-scroll="" class="hero-go-next no-smoothstate">
+        <div class="go-next-label">Works</div><span class="the-arrow arrow-down"></span>
+      </a>
+    </header>
+    <main>
+      <div class="some-shapes">
+        <div data-rellax-speed="-1" class="circle1 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="70"
+            height="70" viewBox="0 0 70 70">
+            <circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5">
+            </circle>
+          </svg></div>
+        <div data-rellax-speed="1" class="square1 rellax">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+            <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
+          </svg>
+        </div>
+        <div data-rellax-speed="1" class="triangle1 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="70"
+            height="70" viewBox="0 0 70 70">
+            <path fill="none" stroke="#0FE851" stroke-width="8" stroke-miterlimit="10" d="M12.6 56l22.8-39.5L58.2 56z">
+            </path>
+          </svg></div>
+        <div data-rellax-speed="-1" class="cross1 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="180"
+            height="180" viewBox="26 -26 180 180">
+            <path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path>
+            <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
+          </svg></div>
+        <div data-rellax-speed="-1.3" class="circle2 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="70"
+            height="70" viewBox="0 0 70 70">
+            <circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5">
+            </circle>
+          </svg></div>
+        <div data-rellax-speed="-1" class="square2 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="100"
+            height="100" viewBox="0 0 100 100">
+            <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
+          </svg></div>
+        <div data-rellax-speed="1" class="triangle2 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="70"
+            height="70" viewBox="0 0 70 70">
+            <path fill="none" stroke="#0FE851" stroke-width="8" stroke-miterlimit="10" d="M12.6 56l22.8-39.5L58.2 56z">
+            </path>
+          </svg></div>
+        <div data-rellax-speed="1" class="cross2 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="180"
+            height="180" viewBox="26 -26 180 180">
+            <path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path>
+            <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
+          </svg></div>
+        <div data-rellax-speed="-1" class="square3 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="100"
+            height="100" viewBox="0 0 100 100">
+            <path fill="#A79FFF" d="M88 12v76H12V12h76m9-9H3v94h94V3z"></path>
+          </svg></div>
+        <div data-rellax-speed="1.3" class="circle3 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="70"
+            height="70" viewBox="0 0 70 70">
+            <circle fill="none" stroke="#6107EF" stroke-width="9" stroke-miterlimit="10" cx="35" cy="35.1" r="28.5">
+            </circle>
+          </svg></div>
+        <div data-rellax-speed="-1" class="cross3 rellax"><svg xmlns="http://www.w3.org/2000/svg" width="180"
+            height="180" viewBox="26 -26 180 180">
+            <path fill="#ffda77" d="M183.208 103.01l-28.143 28.144L49 25.09 77.143-3.055z"></path>
+            <path fill="#ffda77" d="M183.208 25.09L77.143 131.153 49 103.01 155.065-3.053z"></path>
+          </svg></div>
+      </div>
+      <section id="case-studies" itemscope="" itemprop="mainContentOfPage" class="case-studies-section">
+        <div class="section-mask"></div>
+        <div class="content">
+          <div class="section-text-mask">
+            <h4 class="h5 section-subtitle">Case Studies</h4>
+          </div>
+          <div class="section-text-mask">
+            <h2 class="h3 section-title">Latest Works</h2>
+          </div>
+          <ul class="case-studies-list">
+            <li itemscope="" itemtype="http://schema.org/CreativeWork"><a href="https://github.com/thatbynln/inshackle-bot"
+                id="cerasa" style="background-image: url('img/insta1.jpg');" data-destination="cerasa" itemprop="url"
+                class="case-study">
+                <div class="case-study-mask"></div>
+                <div class="case-study-reveal-mask"></div>
+                <div class="case-study-mask-number">
+                  <div class="case-study-mask-back">01</div>
+                  <div class="case-study-mask-front">
+                    <div data-index="01" class="case-study-mask-overlay">01</div>
+                  </div>
+                </div>
+                <div class="case-study-text-section">
+                  <h3 itemprop="name" class="h2 case-study-title">Inshackle-Bot</h3>
+                  <h5 itemprop="description" class="case-study-subtitle">
+                    Terminal Based Insta- Supportinh Tool.</h5><button class="the-button call-to-button">
+                    <span class="button-text">Case Study</span>
+                    <div class="button-mask"></div><span class="button-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+                        <path
+                          d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                        </path>
+                      </svg></span>
+                  </button>
+                </div>
+              </a></li>
+            <li itemscope="" itemtype="http://schema.org/CreativeWork">
+              <a href="https://github.com/thatbynln/webtyper-test" id="lato" style="background-image: url('img/proj4.png');"
+                data-destination="lato" itemprop="url" class="case-study">
+                <div class="case-study-mask"></div>
+                <div class="case-study-reveal-mask"></div>
+                <div class="case-study-mask-number">
+                  <div class="case-study-mask-back">02</div>
+                  <div class="case-study-mask-front">
+                    <div data-index="02" class="case-study-mask-overlay">02</div>
+                  </div>
+                </div>
+                <div class="case-study-text-section">
+                  <h3 itemprop="name" class="h2 case-study-title">WebTyper-Test</h3>
+                  <h5 itemprop="description" class="case-study-subtitle">Best Web Based Typing Speed Test.</h5>
+                  <button class="the-button call-to-button">
+                    <span class="button-text">Case Study</span>
+                    <div class="button-mask"></div><span class="button-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+                        <path
+                          d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                        </path>
+                      </svg></span>
+                  </button>
+                </div>
+              </a>
+            </li>
+            <li itemscope="" itemtype="http://schema.org/CreativeWork">
+              <a href="https://github.com/thatbynln/userrecon" id="la-francesca"
+                style="background-image: url('img/userrecon.png');" data-destination="la-francesca"
+                itemprop="url" class="case-study">
+                <div class="case-study-mask"></div>
+                <div class="case-study-reveal-mask"></div>
+                <div class="case-study-mask-number">
+                  <div class="case-study-mask-back">03</div>
+                  <div class="case-study-mask-front">
+                    <div data-index="03" class="case-study-mask-overlay">03</div>
+                  </div>
+                </div>
+                <div class="case-study-text-section">
+                  <h3 itemprop="name" class="h2 case-study-title">UserRecon V1.0</h3>
+                  <h5 itemprop="description" class="case-study-subtitle">Find usernames across over 75 social networks.
+                  </h5><button class="the-button call-to-button"><span class="button-text">Case Study</span>
+                    <div class="button-mask"></div><span class="button-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 476.213 476.213">
+                        <path
+                          d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                        </path>
+                      </svg></span>
+                  </button>
+                </div>
+              </a>
+            </li>
+            <li itemscope="" itemtype="http://schema.org/CreativeWork"><a href="https://github.com/thatbynln/infogtool/"
+                id="sportland" style="background-image: url('img/InfogTool.jpg');" data-destination="sportland"
+                itemprop="url" class="case-study">
+                <div class="case-study-mask"></div>
+                <div class="case-study-reveal-mask"></div>
+                <div class="case-study-mask-number">
+                  <div class="case-study-mask-back">04</div>
+                  <div class="case-study-mask-front">
+                    <div data-index="04" class="case-study-mask-overlay">04</div>
+                  </div>
+                </div>
+                <div class="case-study-text-section">
+                  <h3 itemprop="name" class="h2 case-study-title">InfoGTool</h3>
+                  <h5 itemprop="description" class="case-study-subtitle">InfoGTool is a Shellscript to perform Information Gathering.</h5><button
+                    class="the-button call-to-button"><span class="button-text">Case Study</span>
+                    <div class="button-mask"></div><span class="button-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 476.213 476.213">
+                        <path
+                          d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607">
+                        </path>
+                      </svg></span>
+                  </button>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="section mobile-only">
+        <div class="section-mask"></div>
+        <div class="content">
+          <div class="button-content text-center"><button class="the-button button-big open-contact">Contact me</button>
+          </div>
+        </div>
+      </section>
+      <section id="experiments" class="experiments-section">
+        <div class="section-mask"></div>
+        <div class="inner-container">
+          <div class="section-text-mask">
+            <h4 class="h5 section-subtitle">Experiments &amp; Open Source</h4>
+          </div>
+          <div class="section-text-mask">
+            <h2 class="h3 section-title">Web is fun.</h2>
+          </div>
+        </div>
+        <div class="inner-container hidden">
+          <div class="experiments-mask-reveal"><span
+              style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);"></span><span
+              style="transform: translate(0%, -100%) matrix(1, 0, 0, 1, 0, 0);"></span></div>
+          <div class="inner-container"><a href="http://codepen.io/rickzanutta/pen/yjaeB" target="_blank" rel="noopener"
+              class="experiment">
+              <div class="experiment-mask"></div>
+              <div class="experiment-number-mask"><span>01</span></div>
+              <div class="experiment-circle">
+                <div class="experiment-image"></div>
+              </div>
+              <div class="experiment-title-area">
+                <div class="experiment-title-label">Title</div>
+                <div class="experiment-title">CSS3 spin preloader + preload Page</div>
+              </div>
+              <div class="experiment-number-area">&nbsp;</div>
+            </a><a href="http://codepen.io/rickzanutta/pen/NNzGVd" target="_blank" rel="noopener" class="experiment">
+              <div class="experiment-mask"></div>
+              <div class="experiment-number-mask"><span>02</span></div>
+              <div class="experiment-circle">
+                <div class="experiment-image"></div>
+              </div>
+              <div class="experiment-title-area">
+                <div class="experiment-title-label">Title</div>
+                <div class="experiment-title">Search Input context animation</div>
+              </div>
+              <div class="experiment-number-area">&nbsp;</div>
+            </a><a href="https://github.com/Riccardo-Zanutta/brick" target="_blank" rel="noopener" class="experiment">
+              <div class="experiment-mask"></div>
+              <div class="experiment-number-mask"><span>03</span></div>
+              <div class="experiment-circle">
+                <div class="experiment-image"></div>
+              </div>
+              <div class="experiment-title-area">
+                <div class="experiment-title-label">Title</div>
+                <div class="experiment-title">BRick Boilerplate</div>
+              </div>
+              <div class="experiment-number-area">&nbsp;</div>
+            </a><a href="http://codepen.io/rickzanutta/pen/aOQddB" target="_blank" rel="noopener" class="experiment">
+              <div class="experiment-mask"></div>
+              <div class="experiment-number-mask"><span>04</span></div>
+              <div class="experiment-circle">
+                <div class="experiment-image"></div>
+              </div>
+              <div class="experiment-title-area">
+                <div class="experiment-title-label">Title</div>
+                <div class="experiment-title">Open &amp; Close Menu Animation</div>
+              </div>
+              <div class="experiment-number-area">&nbsp;</div>
+            </a></div>
+        </div>
+      </section>
+      <div class="about-contact">
+        <div id="contact-half" class="half-contact is-contact">
+          <div class="form-loader">
+            <div class="form-loader-content">
+              <div class="stripe-loader">
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+                <div class="stripe"></div>
+              </div>
+            </div>
+            <div class="form-message-content">
+              <div class="form-message">Default Message</div>
+            </div>
+          </div>
+          <div class="form-loader-before"></div>
+          <div class="giga-text">Contact</div>
+          <div class="contact-info">
+            <h3 class="h4 form-title">Let’s talk.</h3>
+            <p class="form-subtitle">New projects, freelance inquiry or even a coffee.</p>
+            <div class="inner-container">
+              <form id="contact-form" method="post" action="mailer.php" class="the-form no-smoothState">
+                <div class="input required"><input type="text" id="name" name="name"><label class="label">Name</label>
+                </div>
+                <div class="input required email"><input type="text" id="email" name="email"><label
+                    class="label">E-mail</label></div>
+                <div class="input required"><textarea id="message" name="message"></textarea><label
+                    class="label">Message</label></div>
+                <div class="inner-container"><button type="submit" disabled="disabled"
+                    class="the-button submit-button"><span class="button-text">Send Message</span>
+                    <div class="button-mask"></div>
+                  </button></div>
+              </form>
+            </div>
+            <div class="close-contact"><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="half-contact is-about">
+          <div class="giga-text">About</div>
+          <div class="about-speed">SP: 0.0625</div>
+          <div class="contact-info">
+            <h3 class="h4 about-me-title">About Me.</h3>
+            <h4 class="h5 about-me-subtitle">Just Some Facts!</h4>
+            <p class="about-me-text">Still Learning New Stuff, FOSS Supporter & Cyber Enthusiast With A Diff- Vision.
+  I enjoy bridging the gap between <strong>studies and internet</strong> — combining my technical knowledge 
+        with my keen eye for design to create a beautiful product.<br>
+When I'm not in front of a computer screen</strong>, Outside of work I enjoy travel, hiking, photography, and watching epic Movie's.<br>
+<strong>BTW I Use Arch</strong></p>
+            <ul class="about-me-list">
+              <li class="react">
+                <div class="about-me-list-label">React.js</div><svg viewBox="0 0 128 128">
+                  <path
+                    d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3-12.5 4.8-19.3 11.4-19.3 18.8s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zm-14.8-30.5c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zm-11.2 59.3c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zm-25.6 27.1c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zm25.6-27.1c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zm-24.7 29c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z">
+                  </path>
+                </svg>
+              </li>
+              <li class="uiux">
+                <div class="about-me-list-label">UI/UX</div><svg xmlns="http://www.w3.org/2000/svg" width="128"
+                  height="128" viewBox="0 0 128 128">
+                  <path
+                    d="M74.6 96.7c1 0 1.9-.8 1.9-1.9s-.9-1.8-1.9-1.8H50.4c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9h24.2zM83.9 100.4H41.1c-1 0-1.9.8-1.9 1.9s.8 1.9 1.9 1.9H84c1 0 1.9-.8 1.9-1.9s-.9-1.9-2-1.9zM20.6 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7 3.7 1.7 3.7 3.7-1.7 3.7-3.7 3.7zM37.3 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S39.4 24 37.3 24zM54.1 12.8c-4.1 0-7.5 3.3-7.5 7.5s3.3 7.5 7.5 7.5 7.5-3.3 7.5-7.5-3.4-7.5-7.5-7.5zm0 11.2c-2.1 0-3.7-1.7-3.7-3.7s1.7-3.7 3.7-3.7c2.1 0 3.7 1.7 3.7 3.7S56.2 24 54.1 24z">
+                  </path>
+                  <path d="M7.5 7.2V119h111.8V7.2H7.5zm3.7 3.8h104.4v18.6H11.2V11zm104.4 104.3H11.2v-82h104.4v82z">
+                  </path>
+                  <path
+                    d="M47.5 81.4l1.7 1.4c.1 0 .1.1.2.1.4.3.7.5 1.1.7.2.1.5.3.7.4.4.2.7.4 1.1.6.3.2.6.3.9.5.3.1.6.3.9.4.6.3 1.3.5 1.9.7.2.1.5.1.7.2.5.1 1 .3 1.5.4.3.1.5.1.8.2.5.1 1 .2 1.5.2.2 0 .5.1.7.1.7.1 1.5.1 2.2.1s1.5 0 2.2-.1c.2 0 .5-.1.7-.1.5-.1 1-.1 1.5-.2.3 0 .5-.1.8-.1.5-.1 1-.2 1.5-.4.2-.1.4-.1.7-.2.6-.2 1.3-.4 1.9-.7.3-.1.6-.3.9-.4.3-.2.7-.3 1-.5.4-.2.7-.4 1-.6.2-.1.5-.3.7-.4.4-.2.7-.5 1.1-.7.1 0 .1-.1.2-.1l1.9-1.4-.1-.1c5.1-4.4 8.3-10.9 8.3-18.2C87.7 49.8 76.8 39 63.5 39S39.2 49.8 39.2 63.1c0 7.3 3.2 13.8 8.3 18.3zM58.4 83c-.7-.2-1.5-.4-2.2-.7-.1 0-.2-.1-.2-.1-.7-.3-1.5-.6-2.2-1l4.5-2.5c1.4-.8 2.3-2.2 2.3-3.8v-3.1l-.4-.5s-1.5-1.8-2.1-4.3l-.2-.9-.6-.4.1-2.8.6-.6v-4.9c0-.1-.1-1.4.8-2.5.9-1 2.5-1.5 4.8-1.5s3.9.5 4.8 1.5c1 1.1.8 2.4.8 2.5v4.1l.1.9.6.6v2.7c0 .1-.1.1-.1.1l-.9.3-.3.9c-.4 1.3-1 2.5-1.8 3.5-.2.2-.3.5-.5.6l-.5.5V75c0 1.6.9 3.1 2.4 3.9l4.8 2.4h-.1c-.7.3-1.3.6-2 .9-.1 0-.2.1-.3.1-.7.3-1.4.5-2.2.7-3.4.8-6.7.8-10 0 .1 0 0 0 0 0zm5-40.4c11.3 0 20.5 9.2 20.5 20.5 0 6.4-2.9 12.1-7.5 15.8-.1-.1-.2-.1-.3-.2l-6.5-3.2c-.2-.1-.3-.3-.3-.5v-1.9c.1-.1.2-.2.3-.4.8-1.1 1.5-2.4 2-3.8 1.1-.7 1.8-1.9 1.8-3.3v-2.7c0-.8-.2-1.5-.7-2.2v-3.1c.1-.7.1-3.1-1.7-5.2-1.6-1.8-4.2-2.8-7.6-2.8s-6 .9-7.6 2.8C54 54.5 54 57 54.1 57.6v3.1c-.4.6-.7 1.4-.7 2.2v2.7c0 1 .4 2 1.1 2.7.6 2.1 1.6 3.8 2.2 4.6V75c0 .2-.1.4-.3.5l-6 3.3c-.1 0-.1.1-.2.1-4.5-3.8-7.4-9.4-7.4-15.8.1-11.3 9.3-20.5 20.6-20.5z">
+                  </path>
+                </svg>
+              </li>
+              <li class="css-code">
+                <div class="about-me-list-label">is Fun.</div><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                  height="32" viewBox="0 0 32 32">
+                  <path fill="#444"
+                    d="M16.017 21.044zM4.743 3.519L6.792 26.5l9.194 2.552 9.22-2.556 2.051-22.977H4.743zM23 8.775l-.693 7.767-.48 5.359-.042.476-5.781 1.603-5.773-1.603-.395-4.426h2.829l.201 2.248 3.142.847.008-.002h.002l3.134-.846.329-3.655h-6.579l-.056-.633-.129-1.429-.067-.756h7.081l.258-2.886H9.203l-.056-.634-.129-1.429-.067-.756h14.118l-.068.756z">
+                  </path>
+                </svg>
+              </li>
+              <li class="fun">
+                <div class="about-me-list-label">Semicolons.</div><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                  height="32" viewBox="0 0 32 32">
+                  <path fill="#444"
+                    d="M.384.67v31.296H31.68V.67H.384zm16.334 26.772c-.461.937-1.342 1.553-2.362 1.85-1.568.36-3.067.155-4.183-.515-.747-.458-1.33-1.163-1.725-1.975.794-.485 1.586-.973 2.38-1.458.021.009.083.122.167.268.303.509.565.869 1.08 1.121.506.172 1.615.283 2.044-.607.262-.452.178-1.936.178-3.545 0-2.529.012-5.016.012-7.576h2.927c0 2.688.015 5.383 0 8.067.006 1.645.149 3.14-.518 4.369zm12.144-.827c-1.017 3.481-6.691 3.594-8.957 1.294-.479-.541-.779-.824-1.065-1.449 1.205-.693 1.205-.693 2.377-1.371.637.979 1.226 1.517 2.285 1.737 1.437.175 2.883-.318 2.559-1.844-.333-1.247-2.942-1.55-4.718-2.883-1.803-1.211-2.225-4.153-.744-5.834.494-.622 1.336-1.086 2.219-1.309l.922-.119c1.77-.036 2.877.431 3.689 1.339.226.229.41.476.756 1.012-.943.601-.94.595-2.291 1.47-.289-.622-.767-1.012-1.273-1.181-.785-.238-1.776.021-1.981.851-.071.256-.056.494.057.916.318.726 1.386 1.041 2.344 1.481 2.758 1.119 3.689 2.317 3.918 3.745.22 1.229-.054 2.026-.095 2.145z">
+                  </path>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer itemscope="" itemtype="http://schema.org/WPFooter" class="footer">
+    <div class="content"><a href="#top" data-scroll="" class="footer-logo no-smoothstate"><img
+          src="assets/logo-white.svg" alt="Riccardo Zanutta's Personal Logo">
+        <div class="footer-logo-top-label">Top<div class="footer-logo-top-icon"><svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 31.479 31.479">
+              <path
+                d="M26.477 10.274a1.112 1.112 0 0 1 0 1.587 1.12 1.12 0 0 1-1.571 0l-8.047-8.047v26.555c0 .619-.492 1.111-1.111 1.111a1.118 1.118 0 0 1-1.127-1.111V3.813L6.59 11.86c-.444.429-1.159.429-1.587 0a1.112 1.112 0 0 1 0-1.587L14.955.321a1.12 1.12 0 0 1 1.571 0l9.951 9.953z"
+                fill="#1e201d"></path>
+            </svg></div>
+        </div>
+      </a>
+      <div class="inner-container text-center">
+        <ul class="footer-links">
+          <li><a href="https://twitter.com/thatbynln" target="_blank" rel="noopener">Twitter</a></li>
+          <li><a href="https://instagram.com/beyondlon" target="_blank" rel="noopener">Instagrm</a></li>
+          <li><a href="https://github.com/thatbynln" target="_blank" rel="noopener">Github</a></li>
+          <li><a href="mailto://hi@thatbynln.slmail.me" target="_blank" rel="noopener">Mail Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-copy">©
+        <script async="" src="assets/google-analytics_analytics.js"></script>
+        <script>document.write(new Date().getFullYear() + ' ');</script>2022 Publically Available - <a
+          href="mailto:hi@thatbynln.slmail.me" class="no-smoothState">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\\/script>');</script>
+ 
+  <script src="assets/application.js"></script>
+</body>
+
+</html>
