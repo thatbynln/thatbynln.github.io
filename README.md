@@ -1,6 +1,6 @@
 # Static V1
 
-First iteration of my personal website built with Jekyll.
+First iteration of my personal website
 
 # WTFPL Added
 Free For Any Use
